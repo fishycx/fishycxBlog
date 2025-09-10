@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { getArticleById, getAllArticles } from '../data/articles';
+import { getArticleById, getAllArticles } from '../utils/articleStorage';
 import './Article.css';
 
 const Article = () => {

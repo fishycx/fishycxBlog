@@ -58,12 +58,6 @@ const ArticleEditor = ({ articles = [], onSave }) => {
 
       await onSave(articleData);
       
-      // 这里可以添加实际的保存逻辑
-      console.log('保存文章:', articleData);
-      
-      // 模拟保存延迟
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
       alert('文章保存成功！');
       navigate('/admin/articles');
     } catch (error) {

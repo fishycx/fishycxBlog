@@ -15,8 +15,8 @@ const Admin = () => {
 
   const loadArticles = async () => {
     try {
-      // 这里可以从API获取文章列表，现在先使用本地数据
-      const { getAllArticles } = await import('../data/articles');
+      // 使用本地存储系统
+      const { getAllArticles } = await import('../utils/articleStorage');
       setArticles(getAllArticles());
     } catch (error) {
       console.error('加载文章失败:', error);
@@ -25,18 +25,32 @@ const Admin = () => {
     }
   };
 
-  const handleArticleSave = (articleData) => {
-    // 这里可以调用API保存文章
-    console.log('保存文章:', articleData);
-    // 重新加载文章列表
-    loadArticles();
+  const handleArticleSave = async (articleData) => {
+    try {
+      // 使用本地存储系统保存文章
+      const { saveArticle } = await import('../utils/articleStorage');
+      await saveArticle(articleData);
+      console.log('文章保存成功:', articleData);
+      // 重新加载文章列表
+      loadArticles();
+    } catch (error) {
+      console.error('保存文章失败:', error);
+      throw error;
+    }
   };
 
-  const handleArticleDelete = (articleId) => {
-    // 这里可以调用API删除文章
-    console.log('删除文章:', articleId);
-    // 重新加载文章列表
-    loadArticles();
+  const handleArticleDelete = async (articleId) => {
+    try {
+      // 使用本地存储系统删除文章
+      const { deleteArticle } = await import('../utils/articleStorage');
+      await deleteArticle(articleId);
+      console.log('文章删除成功:', articleId);
+      // 重新加载文章列表
+      loadArticles();
+    } catch (error) {
+      console.error('删除文章失败:', error);
+      throw error;
+    }
   };
 
   if (loading) {

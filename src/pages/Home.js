@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { getAllArticles, getFeaturedArticles } from '../data/articles';
+import { getAllArticles, getFeaturedArticles } from '../utils/articleStorage';
 import ArticleCard from '../components/ArticleCard';
 import './Home.css';
 
