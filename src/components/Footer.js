@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>FishyCX Blog</h3>
+            <h3>fishycx Blog</h3>
             <p>分享技术、生活和思考的个人博客</p>
           </div>
           

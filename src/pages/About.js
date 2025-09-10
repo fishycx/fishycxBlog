@@ -12,7 +12,7 @@ const About = () => {
             </div>
           </div>
           <div className="about-intro">
-            <h1>你好，我是 FishyCX</h1>
+            <h1>你好，我是 fishycx</h1>
             <p className="about-subtitle">
               一个热爱技术的开发者，专注于前端开发，喜欢探索新技术，分享编程经验和生活感悟。
             </p>

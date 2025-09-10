@@ -13,7 +13,7 @@ const Home = () => {
       {/* 英雄区域 */}
       <section className="hero">
         <div className="hero-content">
-          <h1>欢迎来到 FishyCX Blog</h1>
+          <h1>欢迎来到 fishycx Blog</h1>
           <p>分享技术、生活和思考的个人博客</p>
           <div className="hero-stats">
             <div className="stat">
