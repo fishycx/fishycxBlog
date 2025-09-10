@@ -11,13 +11,13 @@ import './components/admin/AdminStyles.css';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
       <Routes>
         {/* 管理后台路由 */}
         <Route path="/admin/*" element={<Admin />} />
         
         {/* 博客前台路由 */}
-        <Route path="/" element={
+        <Route path="/*" element={
           <div className="App">
             <Header />
             <main className="main-content">
