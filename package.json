@@ -21,7 +21,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "new": "node scripts/create-article.js",
+    "publish": "node scripts/publish-articles.js",
+    "deploy-blog": "npm run publish && git add . && git commit -m \"发布新文章\" && git push origin main"
   },
   "eslintConfig": {
     "extends": [
