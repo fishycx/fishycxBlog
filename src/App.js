@@ -11,7 +11,7 @@ import './components/admin/AdminStyles.css';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         {/* 管理后台路由 */}
         <Route path="/admin/*" element={<Admin />} />
