@@ -37,6 +37,13 @@ const Header = () => {
             >
               关于我
             </Link>
+            <Link 
+              to="/admin" 
+              className="nav-link admin-link"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              📝 管理
+            </Link>
             <a 
               href="https://github.com/fishycx" 
               target="_blank" 
